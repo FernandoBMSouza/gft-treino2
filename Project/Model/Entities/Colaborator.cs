@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace Project.Model.Entities
 {
@@ -14,7 +15,10 @@ namespace Project.Model.Entities
         }
         public override string ToString()
         {
-            return $"{Name}, {Registration}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Name: {Name}");
+            sb.AppendLine($"Registration: {Registration}");
+            return sb.ToString();
         }
     }
 }
